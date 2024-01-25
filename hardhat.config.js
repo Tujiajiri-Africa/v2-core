@@ -114,6 +114,8 @@ module.exports = {
     linea_mainnet: {
       url: `https://linea-mainnet.infura.io/v3/${INFURA_API_KEY}`,
       accounts: [KAVA_DEPLOYER],
+      allowUnlimitedContractSize: true,
+      chainId: 59144
     },
   },
   etherscan: {

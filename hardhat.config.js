@@ -25,7 +25,7 @@ const LINEASCAN_API_KEY = process.env.LINEASCAN_API_KEY
 
 module.exports = {
   solidity: {
-    version: "0.8.19",
+    version: "0.5.17",
     settings: {
       optimizer: {
         enabled: true,

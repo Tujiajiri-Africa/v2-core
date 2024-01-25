@@ -13,7 +13,7 @@ import "./Types.sol";
  * @author Sablier
  * @notice Money streaming.
  */
-contract AjiraPayFinanceTokenStreamingVault is ISablier, ReentrancyGuard, CarefulMath {
+contract AjiraPayFinanceTokenStreamVault is ISablier, ReentrancyGuard, CarefulMath {
     using SafeERC20 for IERC20;
 
     /*** Storage Properties ***/

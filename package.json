@@ -14,7 +14,12 @@
     "hardhat": "^2.19.4"
   },
   "dependencies": {
-    "@nomicfoundation/hardhat-verify": "^2.0.3",
-    "dotenv": "^16.4.1"
+    "@layerzerolabs/solidity-examples": "^0.0.13",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@openzeppelin/contracts": "^4.9.3",
+    "dotenv": "^16.3.1",
+    "hardhat-chai-matchers": "^0.0.1",
+    "witnet-solidity-bridge": "^0.6.1"
   }
 }

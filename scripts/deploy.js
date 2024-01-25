@@ -1,7 +1,7 @@
 const hre = require("hardhat");
 
 async function main() {
-  const stream = await hre.ethers.deployContract('AjiraPayFinanceTokenStreamingVault');
+  const stream = await hre.ethers.deployContract('AjiraPayFinanceTokenStreamVault');
 
   await stream.waitForDeployment();
   

@@ -24,6 +24,9 @@ const LINEASCAN_API_KEY = process.env.LINEASCAN_API_KEY
 /** @type import('hardhat/config').HardhatUserConfig */
 
 module.exports = {
+  sourcify: {
+    enabled: true
+  },
   solidity: {
     version: "0.5.17",
     settings: {
@@ -31,6 +34,7 @@ module.exports = {
         enabled: true,
         runs: 200,
       },
+  
     },
   },
   networks: {
@@ -104,6 +108,8 @@ module.exports = {
     linea_testnet: {
       url: `https://linea-goerli.infura.io/v3/${INFURA_API_KEY}`,
       accounts: [KAVA_DEPLOYER],
+      allowUnlimitedContractSize: true,
+      chainId: 59140
     },
     linea_mainnet: {
       url: `https://linea-mainnet.infura.io/v3/${INFURA_API_KEY}`,

@@ -5,7 +5,7 @@ async function main() {
 
   await stream.waitForDeployment();
   
-  console.log("Ajira Pay Finance Stream Vault on Polygon POS mainnet deployed to:", stream.target);
+  console.log("Ajira Pay Finance Stream Vault on Arbitrum mainnet deployed to:", stream.target);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

@@ -82,8 +82,8 @@ module.exports = {
     },
     arbitrumOne:{
       chainId: 42161,
-      url: 'https://arb1.arbitrum.io/rpc',
-      accounts: [MULTICHAIN_DEPLOYER],
+      url: `https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}`,
+      accounts: [KAVA_DEPLOYER],
       allowUnlimitedContractSize: true
     },
     celo: {

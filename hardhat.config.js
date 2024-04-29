@@ -60,7 +60,7 @@ module.exports = {
       url: "https://bsc-dataseed.binance.org/",
       chainId: 56,
       networkCheckTimeout: 500000000000,
-      accounts: [MULTICHAIN_DEPLOYER],
+      accounts: [KAVA_DEPLOYER],
     },
     polygon: {
       chainId: 137,

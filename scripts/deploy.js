@@ -1,12 +1,18 @@
 const hre = require("hardhat");
 
 async function main() {
-  const STREAM_CONTRACT_ADDRESS = "0xD2AA294B9A5097F4A09fd941eD0bE665bd85Eab2"
-  const batchStream = await hre.ethers.deployContract('BatchStreamer',[STREAM_CONTRACT_ADDRESS],{});
+  // const STREAM_CONTRACT_ADDRESS = "0xD2AA294B9A5097F4A09fd941eD0bE665bd85Eab2"
+  // const batchStream = await hre.ethers.deployContract('BatchStreamer',[STREAM_CONTRACT_ADDRESS],{});
 
-  await batchStream.waitForDeployment();
+  // await batchStream.waitForDeployment();
   
-  console.log("Ajira Pay Finance Stream Vault deployed to:", batchStream.target);
+  // console.log("Ajira Pay Finance Stream Vault deployed to:", batchStream.target);
+
+  const streamContract = await hre.ethers.deployContract('AjiraPayFinanceTokenStreamVault');
+
+  await streamContract.waitForDeployment();
+
+  console.log("Ajira Pay Finance Stream Vault on celo mainnet deployed to:", streamContract.target);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

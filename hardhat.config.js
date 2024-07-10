@@ -130,7 +130,8 @@ module.exports = {
       alfajores: CELOSCAN_API_KEY,
       celo: CELOSCAN_API_KEY,
       linea_mainnet: LINEASCAN_API_KEY,
-      linea_testnet: LINEASCAN_API_KEY
+      linea_testnet: LINEASCAN_API_KEY,
+      celo: CELOSCAN_API_KEY
     },
     customChains: [
       {
@@ -163,6 +164,14 @@ module.exports = {
         urls: {
           apiURL: "https://api-testnet.lineascan.build/api",
           browserURL: "https://goerli.lineascan.build/address"
+        }
+      },
+      {
+        network: "celo",
+        chainId: 42220,
+        urls: {
+          apiURL: "https://explorer.celo.org/mainnet/api", //
+          browserURL: "https://explorer.celo.org/mainnet/address"
         }
       }
     ],

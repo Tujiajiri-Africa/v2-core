@@ -21,6 +21,7 @@ const KAVA_DEPLOYER = process.env.KAVA_DEPLOYER
 const CELOSCAN_API_KEY = process.env.CELOSCAN_API_KEY
 const LINEASCAN_API_KEY = process.env.LINEASCAN_API_KEY
 const BASESCAN_API_KEY = process.env.BASESCAN_API_KEY
+const OPTIMISTIC_ETHERSCAN_API_KEY = process.env.OPTIMISTIC_ETHERSCAN_API_KEY
 
 /** @type import('hardhat/config').HardhatUserConfig */
 
@@ -51,6 +52,11 @@ module.exports = {
       accounts: [KAVA_DEPLOYER],
       allowUnlimitedContractSize: true,
       //gasPrice: 1000000000
+    },
+    baseSepolia: {
+      url: 'https://sepolia.base.org',
+      accounts: [KAVA_DEPLOYER],
+      gasPrice: 1000000000,
     },
     bscTestnet: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545",
@@ -125,6 +131,12 @@ module.exports = {
       allowUnlimitedContractSize: true,
       chainId: 59144
     },
+    optimism: {
+      url: `https://optimism-mainnet.infura.io/v3/${INFURA_API_KEY}`,//"https://endpoints.omniatech.io/v1/op/mainnet/public",
+      accounts: [KAVA_DEPLOYER],
+      allowUnlimitedContractSize: true,
+      chainId: 10
+    },
   },
   etherscan: {
     apiKey: {
@@ -140,7 +152,9 @@ module.exports = {
       linea_mainnet: LINEASCAN_API_KEY,
       linea_testnet: LINEASCAN_API_KEY,
       celo: CELOSCAN_API_KEY,
-      base: BASESCAN_API_KEY
+      base: BASESCAN_API_KEY,
+      baseSepolia:BASESCAN_API_KEY,
+      optimism: OPTIMISTIC_ETHERSCAN_API_KEY
     },
     customChains: [
       {
@@ -189,6 +203,22 @@ module.exports = {
         urls: {
           apiURL: "https://api.basescan.org/api",
           browserURL: "https://basescan.org"
+        }
+      },
+      {
+        network: "baseSepolia",//"base-sepolia",
+        chainId: 84532,
+        urls: {
+         apiURL: "https://api-sepolia.basescan.org/api",
+         browserURL: "https://sepolia.basescan.org"
+        }
+      },
+      {
+        network: "optimism",
+        chainId: 10,
+        urls: {
+         apiURL: "https://api-optimistic.etherscan.io/api",
+         browserURL: "https://optimistic.etherscan.io/"
         }
       }
     ],

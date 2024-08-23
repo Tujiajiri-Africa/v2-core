@@ -20,6 +20,7 @@ const TESTNET_ACCOUNT_V2 = process.env.TESTNET_ACCOUNT_V2
 const KAVA_DEPLOYER = process.env.KAVA_DEPLOYER
 const CELOSCAN_API_KEY = process.env.CELOSCAN_API_KEY
 const LINEASCAN_API_KEY = process.env.LINEASCAN_API_KEY
+const BASESCAN_API_KEY = process.env.BASESCAN_API_KEY
 
 /** @type import('hardhat/config').HardhatUserConfig */
 
@@ -43,6 +44,13 @@ module.exports = {
     },
     hardhat: {
 
+    },
+    base: {
+      chainId: 8453,
+      url: `https://mainnet.base.org`,
+      accounts: [KAVA_DEPLOYER],
+      allowUnlimitedContractSize: true,
+      //gasPrice: 1000000000
     },
     bscTestnet: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545",
@@ -131,7 +139,8 @@ module.exports = {
       celo: CELOSCAN_API_KEY,
       linea_mainnet: LINEASCAN_API_KEY,
       linea_testnet: LINEASCAN_API_KEY,
-      celo: CELOSCAN_API_KEY
+      celo: CELOSCAN_API_KEY,
+      base: BASESCAN_API_KEY
     },
     customChains: [
       {
@@ -172,6 +181,14 @@ module.exports = {
         urls: {
           apiURL: "https://api.celoscan.io/api",//"https://explorer.celo.org/mainnet/api", //
           browserURL: "https://celoscan.io/"
+        }
+      },
+      {
+        network: "base",
+        chainId: 8453,
+        urls: {
+          apiURL: "https://api.basescan.org/api",
+          browserURL: "https://basescan.org"
         }
       }
     ],

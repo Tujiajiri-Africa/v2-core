@@ -12,7 +12,7 @@ async function main() {
 
   await streamContract.waitForDeployment();
 
-  console.log("Ajira Pay Finance Stream Vault on celo mainnet deployed to:", streamContract.target);
+  console.log("Ajira Pay Finance Stream Vault on base mainnet deployed to:", streamContract.target);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

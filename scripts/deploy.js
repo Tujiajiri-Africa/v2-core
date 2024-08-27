@@ -6,7 +6,7 @@ async function main() {
 
   await batchStream.waitForDeployment();
   
-  console.log("Ajira Pay Finance Batch Stream Vault on OP Mainnet deployed to:", batchStream.target);
+  console.log("Ajira Pay Finance Batch Stream Vault on Base mainnet deployed to:", batchStream.target);
 
   // const streamContract = await hre.ethers.deployContract('AjiraPayFinanceTokenStreamVault');
 
